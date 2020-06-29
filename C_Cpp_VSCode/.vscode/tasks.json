@@ -1,0 +1,219 @@
+
+{  
+    "version": "2.0.0", 
+    "tasks": [
+        // C CONFIG
+        {
+            "label": "Makefile Debug_gcc",
+            "type": "shell",
+            "command": ["${config:make} c_all"],
+            "args": [
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/", 
+                "DEBUG=1",
+                "C_CODE=1",
+                "C_COMPILER=${config:compilerC}",
+                "C_EXECUTABLE=${fileBasenameNoExtension}Debug"
+            ]
+        },
+        {
+            "label": "Makefile Release_gcc",
+            "type": "shell",
+            "command": ["${config:make} c_all"],
+            "args": [
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/", 
+                "DEBUG=0", 
+                "C_CODE=1",
+                "C_COMPILER=${config:compilerC}",
+                "C_EXECUTABLE=${fileBasenameNoExtension}Release"
+            ]
+        },
+        {
+            "label": "C: Release (Single File)",
+            "type": "shell",
+            "command": "${config:compilerC}",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}Release"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C: Debug (Single File)",
+            "type": "shell",
+            "command": "${config:compilerC}",
+            "args": [
+                "${file}",
+                "-g3",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C: Debug (Folder)",
+            "type": "shell",
+            "command": [""],
+            "dependsOn": [
+                "Makefile Debug_gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C: Release (Folder)",
+            "type": "shell",
+            "command": [""],
+            "dependsOn": [
+                "Makefile Release_gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        // Cpp CONFIG
+        {
+            "label": "Makefile Debug_g++",
+            "type": "shell",
+            "command": ["${config:make} cpp_all"],
+            "args": [
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/", 
+                "DEBUG=1", 
+                "CPP_CODE=1",
+                "CPP_COMPILER=${config:compilerCpp}",
+                "CPP_EXECUTABLE=${fileBasenameNoExtension}Debug"
+            ],
+        },
+        {
+            "label": "Makefile Release_g++",
+            "type": "shell",
+            "command": ["${config:make} cpp_all"],
+            "args": [
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/", 
+                "DEBUG=0", 
+                "CPP_CODE=1",
+                "CPP_COMPILER=${config:compilerCpp}",
+                "CPP_EXECUTABLE=${fileBasenameNoExtension}Release"
+            ]
+        },
+        {
+            "label": "Cpp: Release (Single File)",
+            "type": "shell",
+            "command": "${config:compilerCpp}",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}Release"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Cpp: Debug (Single File)",
+            "type": "shell",
+            "command": "${config:compilerCpp}",
+            "args": [
+                "${file}",
+                "-g3",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}Debug"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Cpp: Debug (Folder)",
+            "type": "shell",
+            "command": [""],
+            "dependsOn": [
+                "Makefile Debug_g++"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Cpp: Release (Folder)",
+            "type": "shell",
+            "command": [""],
+            "dependsOn": [
+                "Makefile Release_g++"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        // Execution
+        {
+            "label": "C/Cpp: Execute Debug",
+            "type": "shell",
+            "command": ["${fileDirname}/${fileBasenameNoExtension}Debug"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "C/Cpp: Execute Release",
+            "type": "shell",
+            "command": ["${fileDirname}/${fileBasenameNoExtension}Release"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}

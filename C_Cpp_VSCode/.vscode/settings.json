@@ -1,5 +1,11 @@
 {
-    "files.associations": {
-        "span": "cpp"
-    }
+    // C and Cpp settings
+    // @sync os=windows
+    "make": "mingw32-make",
+    // @sync os=linux
+    // @sync os=mac
+    // "make": "make",
+    "debugger": "gdb",
+    "compilerC": "gcc",
+    "compilerCpp": "g++",
 }

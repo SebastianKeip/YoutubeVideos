@@ -1,0 +1,93 @@
+{ 
+    "version": "0.2.0", 
+    "configurations": [      
+        { 
+            "name": "(gdb) C: Debug (Single File)", 
+            "type": "cppdbg", 
+            "request": "launch", 
+            "program": "${fileDirname}/${fileBasenameNoExtension}Debug", 
+            "args": [], 
+            "stopAtEntry": false, 
+            "cwd": "${fileDirname}", 
+            "environment": [], 
+            "externalConsole": true, 
+            "MIMode": "gdb", 
+            "internalConsoleOptions": "openOnSessionStart",
+            "miDebuggerPath": "${config:debugger}",
+            "setupCommands": [ 
+                { 
+                    "description": "Enable pretty-printing for gdb", 
+                    "text": "-enable-pretty-printing", 
+                    "ignoreFailures": true 
+                } 
+            ], 
+            "preLaunchTask": "C: Debug (Single File)",
+        },
+        { 
+            "name": "(gdb) C: Debug (Folder)", 
+            "type": "cppdbg", 
+            "request": "launch", 
+            "program": "${fileDirname}/${fileBasenameNoExtension}Debug", 
+            "args": [], 
+            "stopAtEntry": false, 
+            "cwd": "${fileDirname}", 
+            "environment": [], 
+            "externalConsole": true, 
+            "MIMode": "gdb", 
+            "internalConsoleOptions": "openOnSessionStart",
+            "miDebuggerPath": "${config:debugger}",
+            "setupCommands": [ 
+                { 
+                    "description": "Enable pretty-printing for gdb", 
+                    "text": "-enable-pretty-printing", 
+                    "ignoreFailures": true 
+                } 
+            ], 
+            "preLaunchTask": "C: Debug (Folder)",
+        },
+        { 
+            "name": "(gdb) Cpp: Debug (Single File)", 
+            "type": "cppdbg", 
+            "request": "launch", 
+            "program": "${fileDirname}/${fileBasenameNoExtension}Debug", 
+            "args": [], 
+            "stopAtEntry": false, 
+            "cwd": "${fileDirname}", 
+            "environment": [], 
+            "externalConsole": true, 
+            "MIMode": "gdb", 
+            "internalConsoleOptions": "openOnSessionStart",
+            "miDebuggerPath": "${config:debugger}",
+            "setupCommands": [ 
+                { 
+                    "description": "Enable pretty-printing for gdb", 
+                    "text": "-enable-pretty-printing", 
+                    "ignoreFailures": true 
+                } 
+            ], 
+            "preLaunchTask": "Cpp: Debug (Single File)",
+        },
+        { 
+            "name": "(gdb) Cpp: Debug (Folder)", 
+            "type": "cppdbg", 
+            "request": "launch", 
+            "program": "${fileDirname}/${fileBasenameNoExtension}Debug", 
+            "args": [], 
+            "stopAtEntry": false, 
+            "cwd": "${fileDirname}", 
+            "environment": [], 
+            "externalConsole": true, 
+            "MIMode": "gdb", 
+            "internalConsoleOptions": "openOnSessionStart",
+            "miDebuggerPath": "${config:debugger}",
+            "setupCommands": [ 
+                { 
+                    "description": "Enable pretty-printing for gdb", 
+                    "text": "-enable-pretty-printing", 
+                    "ignoreFailures": true 
+                } 
+            ], 
+            "preLaunchTask": "Cpp: Debug (Folder)",
+        }
+    ]
+  }
