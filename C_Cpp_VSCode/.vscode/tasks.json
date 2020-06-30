@@ -6,8 +6,9 @@
         {
             "label": "Makefile Debug_gcc",
             "type": "shell",
-            "command": ["${config:make} c_all"],
+            "command": ["${config:make}"],
             "args": [
+                "c_all",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "SRC_DIR=${fileDirname}/", 
@@ -20,8 +21,9 @@
         {
             "label": "Makefile Release_gcc",
             "type": "shell",
-            "command": ["${config:make} c_all"],
+            "command": ["${config:make}"],
             "args": [
+                "c_all",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "SRC_DIR=${fileDirname}/", 
@@ -69,7 +71,15 @@
         {
             "label": "C: Debug (Folder)",
             "type": "shell",
-            "command": [""],
+            "command": ["${config:make}"],
+            "args": [
+                "clean",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/",
+                "C_CODE=1",
+                "C_EXECUTABLE=${fileBasenameNoExtension}Debug"
+            ],
             "dependsOn": [
                 "Makefile Debug_gcc"
             ],
@@ -84,7 +94,15 @@
         {
             "label": "C: Release (Folder)",
             "type": "shell",
-            "command": [""],
+            "command": ["${config:make}"],
+            "args": [
+                "clean",
+                "--file=${workspaceFolder}/.vscode/Makefile",
+                "--directory=${fileDirname}/",
+                "SRC_DIR=${fileDirname}/",
+                "C_CODE=1",
+                "C_EXECUTABLE=${fileBasenameNoExtension}Debug"
+            ],
             "dependsOn": [
                 "Makefile Release_gcc"
             ],
@@ -100,8 +118,9 @@
         {
             "label": "Makefile Debug_g++",
             "type": "shell",
-            "command": ["${config:make} cpp_all"],
+            "command": ["${config:make}"],
             "args": [
+                "cpp_all",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "SRC_DIR=${fileDirname}/", 
@@ -114,8 +133,9 @@
         {
             "label": "Makefile Release_g++",
             "type": "shell",
-            "command": ["${config:make} cpp_all"],
+            "command": ["${config:make}"],
             "args": [
+                "cpp_all",
                 "--file=${workspaceFolder}/.vscode/Makefile",
                 "--directory=${fileDirname}/",
                 "SRC_DIR=${fileDirname}/", 
@@ -192,7 +212,7 @@
         },
         // Execution
         {
-            "label": "C/Cpp: Execute Debug",
+            "label": "Execute: Debug Program",
             "type": "shell",
             "command": ["${fileDirname}/${fileBasenameNoExtension}Debug"],
             "group": {
@@ -204,7 +224,7 @@
             ]
         },
         {
-            "label": "C/Cpp: Execute Release",
+            "label": "Execute: Release Program",
             "type": "shell",
             "command": ["${fileDirname}/${fileBasenameNoExtension}Release"],
             "group": {

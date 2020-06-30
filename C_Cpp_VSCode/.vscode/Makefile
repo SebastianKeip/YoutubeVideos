@@ -20,6 +20,14 @@ $(C_EXECUTABLE): $(C_OBJECTS)
 
 %.o: %.c
 	$(C_COMPILER_CALL) -c -o $@ $<
+
+ifeq ($(OS), Windows_NT)
+clean:
+	-del $(C_EXECUTABLE).exe *.o
+else
+clean:
+	-rm *.o
+endif
 endif
 
 CPP_CODE ?= 0
@@ -27,9 +35,9 @@ ifeq ($(CPP_CODE), 1)
 # CPP
 DEBUG ?= 1
 ifeq ($(DEBUG), 1)
-CPP_COMPILER_FLAGS = -g3 -Wall -std=c++2a -U__STRICT_ANSI__
+CPP_COMPILER_FLAGS = -g3 -Wall -std=c++17 -U__STRICT_ANSI__
 else
-CPP_COMPILER_FLAGS = -O2 -Wall -std=c++2a -U__STRICT_ANSI__
+CPP_COMPILER_FLAGS = -O2 -Wall -std=c++17 -U__STRICT_ANSI__
 endif
 
 CPP_COMPILER_CALL = $(CPP_COMPILER) $(CPP_COMPILER_FLAGS)
