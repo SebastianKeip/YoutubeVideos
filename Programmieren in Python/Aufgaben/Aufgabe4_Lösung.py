@@ -3,12 +3,12 @@
 # Aufgabe:
 # Erstelle eine Klasse, die dich als menschen
 # darstellt, mit den Attributen Name, Nachname,
-# Alter. Schreibe dann eine Funktion die dir die Daten 
+# Alter. Schreibe dann eine Funktion die dir die Daten
 # ausgibt. Erstelle dann eine Klasse Student die davon erbt
 # und ebenfalls dazu Matr. Nr., Semester und Studiengang
 # als Attribut hat.
 #
-# Zusatzaufgabe: Erstelle einige Objekte und probier ein bisschen 
+# Zusatzaufgabe: Erstelle einige Objekte und probier ein bisschen
 # mit der print Funktion herum. Teste ob das Objekt ein Student ist oder nicht.
 
 class Mensch:
@@ -24,6 +24,7 @@ class Mensch:
     def print_daten(self):
         print('Mensch: ', self.name, " ", self.nachname, " Alter: ", self.alter)
 
+
 class Student(Mensch):
     mnr = 0
     semester = 0
@@ -38,6 +39,7 @@ class Student(Mensch):
     def print_daten(self):
         super(Student, self).print_daten()
         print('Mnr: ', self.mnr, ' Semester: ', self.semester, ' Studiengang: ', self.studiengang)
+
 
 jan = Student(1080, 1, 'Master AI', 'Jan', 'S', 23)
 jan.print_daten()

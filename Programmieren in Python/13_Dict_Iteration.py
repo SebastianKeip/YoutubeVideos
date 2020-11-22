@@ -2,8 +2,8 @@
 
 tagebuch = {'montag': 'Doofer Tag', 'dienstag': 'War schon besser'}
 
-tagebuch2 = {'montag': ['Schule doof', 'alles doof'], 
-            'dienstag': ['Schule doof', 'ich bin aber cool']}
+tagebuch2 = {'montag': ['Schule doof', 'alles doof'],
+             'dienstag': ['Schule doof', 'ich bin aber cool']}
 
 # for val in tagebuch:
 #     print(val)

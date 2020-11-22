@@ -3,7 +3,7 @@
 # Aufgabe:
 # Erstelle eine Klasse, die dich als menschen
 # darstellt, mit den Attributen Name, Nachname,
-# Alter. Schreibe dann eine Funktion die dir die Daten 
+# Alter. Schreibe dann eine Funktion die dir die Daten
 # ausgibt. Erstelle dann eine Klasse Student die davon erbt
 # und ebenfalls dazu Matr. Nr., Semester und Studiengang
 # als Attribut hat.

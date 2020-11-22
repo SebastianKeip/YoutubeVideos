@@ -18,5 +18,5 @@ print(namens_test2)
 namens_test3 = familie_mutter ^ familie_vater
 print(namens_test3)
 
-familie2 = {person for person in familie_mutter + familie_vater  }
+familie2 = {person for person in familie_mutter + familie_vater}
 print(familie2)

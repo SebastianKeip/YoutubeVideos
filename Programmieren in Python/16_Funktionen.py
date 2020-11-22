@@ -8,5 +8,6 @@ def func(a=2, b=6, c=None):
 
     return val, a, b
 
+
 wert, a, b = func(3, 12)
 print(wert, a, b)

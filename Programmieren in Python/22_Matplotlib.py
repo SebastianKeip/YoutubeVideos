@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 data = [1, 0, 7, 8, 10]
 
 plt.plot(data, c='r')
-x1 = 0 
+x1 = 0
 x2 = 5
 y1 = 3
 y2 = 5

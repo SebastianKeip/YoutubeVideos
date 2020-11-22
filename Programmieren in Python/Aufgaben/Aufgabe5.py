@@ -4,9 +4,9 @@
 #
 # Lege einen Zufälligen Datensatz an.
 # Stelle diese Daten in Matplotlib als Scatterplot dar (Farbe=Blau).
-# Beschrifte Dabei die Achsen nach Wahl und zeichne die Linie 
+# Beschrifte Dabei die Achsen nach Wahl und zeichne die Linie
 # des Mittelwertes der Daten in Rot ein.
-# 
+#
 # Zusatzaufgabe: Gebe ebenfalls den Median als Gelbe Linie im Plot aus.
 
 import random

@@ -1,6 +1,8 @@
 import random
-from math import sqrt
-from euclid import *
+
+from euclid import gcd
+from euclid import extgcd
+
 
 def select_a_list(n):
     if n < 2047:
@@ -16,8 +18,9 @@ def select_a_list(n):
     else:
         return [i for i in range(2, n - 1)]
 
-# Square and Multiply Algorithm
+
 def square_and_multiply(base, exp, mod):
+    '''Square and Multiply Algorithm'''
     if exp == 0:
         x = 1
     else:
@@ -27,8 +30,9 @@ def square_and_multiply(base, exp, mod):
             x *= base
     return x % mod
 
-# Rabin Miller Test to check primality
+
 def rabin_miller_test(n):
+    '''Rabin Miller Test to check primality'''
     a_list = select_a_list(n)
     for a in a_list:
         s = 0
@@ -49,31 +53,34 @@ def rabin_miller_test(n):
                 return False
     return True
 
-# Function to test if a number is prime
+
 def is_prime(num):
+    '''Function to test if a number is prime'''
     if num == 2 or num == 3:
         return True
     if num < 2 or num % 3 == 0:
         return False
     return rabin_miller_test(num)
 
-# Function to generate random primes
+
 def generate_primes(lb, ub):
+    '''Function to generate random primes'''
     found = False
     if lb % 2 == 0:
         lb += 1
     while not found:
         # Generate just odd random numbers
         p = random.randrange(lb, ub, 2)
-        q = random.randrange(lb, ub, 2) 
+        q = random.randrange(lb, ub, 2)
         # Check if random numbers are prime
         if is_prime(p) and is_prime(q) and p != q:
             found = True
 
     return p, q
 
-# Function to compute e and d
+
 def compute_params(phi_n):
+    '''Function to compute e and d'''
     d = 0
     e = 0
     found_e = False
@@ -87,15 +94,16 @@ def compute_params(phi_n):
         d += phi_n
     return d, e
 
-# Main function to generate primes and params
+
 def generate_params(seed=42, lb=3, ub=100, DEBUG=True):
+    '''Main function to generate primes and params'''
     p, q = generate_primes(lb, ub)
-    n = p * q 
-    phi_n = (p-1) * (q-1)   
+    n = p * q
+    phi_n = (p - 1) * (q - 1)
     d, e = compute_params(phi_n)
-    if DEBUG == True:
+    if DEBUG:
         print("P, Q: ", p, q)
-        print("N: ", n) 
-        print("Phi(n): ", phi_n)  
+        print("N: ", n)
+        print("Phi(n): ", phi_n)
         print("E, D: ", e, d)
-    return n, d, e 
+    return n, d, e

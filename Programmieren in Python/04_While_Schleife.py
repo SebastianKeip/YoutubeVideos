@@ -11,8 +11,8 @@ while weiterspielen:
     if zahl < zufalls_zahl:
         print('Zu niedrig')
     elif zahl == zufalls_zahl:
-            print('Gewonnen!')
-            break
+        print('Gewonnen!')
+        break
     else:
         print('Zu Hoch')
 

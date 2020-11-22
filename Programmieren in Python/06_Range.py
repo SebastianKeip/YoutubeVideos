@@ -4,7 +4,7 @@
 # range(0, 3, 1) => 0, 1, 2
 # range(3)
 
-for i in range(0, 3, 1): 
+for i in range(0, 3, 1):
     zahl = int(input('Geben Sie eine Zahl ein!\n'))
 
     if zahl < 10:

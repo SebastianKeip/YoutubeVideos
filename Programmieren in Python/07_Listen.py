@@ -8,8 +8,8 @@ zusatz_liste = ['backpulver', 'motoröl', 'milch']
 zusatz_liste2 = 'brot'
 
 # a = a + b    <=> a += b
-#einkaufs_liste = einkaufs_liste + zusatz_liste
-#einkaufs_liste += zusatz_liste
+# einkaufs_liste = einkaufs_liste + zusatz_liste
+# einkaufs_liste += zusatz_liste
 
 einkaufs_liste.extend(zusatz_liste)
 print(einkaufs_liste)

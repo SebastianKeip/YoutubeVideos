@@ -1,7 +1,6 @@
 # Module laden und eigene erstellen
 import numpy
 import numpy as np
-import Eignes_Modul
 from Eignes_Modul import func
 
 print(numpy.mean([1, 2]))

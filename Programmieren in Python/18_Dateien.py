@@ -19,4 +19,4 @@ print(text_neu)
 
 with open('data.txt', 'a') as f:
     for val in data:
-        f.write(str(val)+ ', ')
+        f.write(str(val) + ', ')

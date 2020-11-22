@@ -1,7 +1,7 @@
 # For-Schleife (einfaches iterieren)
 
 # 0, 1, 2
-for i in range(3): 
+for i in range(3):
     zahl = int(input('Geben Sie eine Zahl ein!\n'))
 
     if zahl < 10:

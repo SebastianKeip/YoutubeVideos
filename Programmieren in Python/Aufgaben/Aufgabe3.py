@@ -9,7 +9,7 @@
 # PI = 1/n * Sum_1^n f(x_i)
 # (starte bei i=1 gehe bis n)
 #
-# Zusatzaufgabe: Vergleiche es  mit Numpy's PI
+# Zusatzaufgabe: Vergleiche es  mit Numpys PI
 # Wie viele Nachkommastellen stimmen mit n=100, 1000, 10000
 # überein?
 

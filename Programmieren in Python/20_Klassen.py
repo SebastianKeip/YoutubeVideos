@@ -15,6 +15,7 @@ class Vector3d:
         print('Y: ', self.y)
         print('Z: ', self.z)
 
+
 null_vector = Vector3d(0, 0, 0)
 null_vector.printCoordinates()
 

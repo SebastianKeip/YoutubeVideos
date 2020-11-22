@@ -25,6 +25,7 @@ class Hund(Tier):
         super(Hund, self).printRasse()
         print('(HUND) Rasse: ', self.rasse)
 
+
 h1 = Hund(10, 'Dackel', 'Männlich', 5)
 
 h1.printRasse()
