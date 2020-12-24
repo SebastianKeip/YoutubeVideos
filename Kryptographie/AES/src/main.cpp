@@ -19,8 +19,8 @@ using std::string;
 
 int main()
 {
-	string file_path_messages = "C:/Users/Jan/Dropbox/_Programmieren/Kryptographie/AES/text.txt";
-	string file_path_encrypted = "C:/Users/Jan/Dropbox/_Programmieren/Kryptographie/AES/encrypted.txt";
+	string file_path_messages = "C:/Users/Jan/Dropbox//Kryptographie/AES/text.txt";
+	string file_path_encrypted = "C:/Users/Jan/Dropbox//Kryptographie/AES/encrypted.txt";
 
 	ByteArray key = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 					0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
