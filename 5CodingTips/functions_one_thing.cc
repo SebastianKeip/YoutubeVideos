@@ -14,7 +14,6 @@ using std::cout;
 using std::endl;
 using std::vector;
 
-// Starting the encryption phase
 ByteArray AES::encrypt(const ByteArray &m_message)
 {
 	register int i = 0, round = 0;
