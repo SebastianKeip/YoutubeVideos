@@ -6,8 +6,7 @@ Dieses Repository ist den Code meiner Youtube Videos.
 - [Mein Twitch Kanal](https://www.twitch.tv/frannecklp)
 - [Mein Discord Server](https://discord.gg/vHzfaPz62H)
 
-Aktuelle Udemy Gutscheine from 01.12.2020 bis zum 31.12.2020,
-Der Rabatt-Code lautet: FRANNECK_JAN_2021
+Der aktuelle Rabatt-Code lautet: FRANNECK_JAN_2021
 
 - C Programmieren (zum aktuellen Bestpreis):
 https://www.udemy.com/course/c-programmierung-praxisnaher-komplettkurs-fur-einsteiger/?couponCode=FRANNECK_JAN_2021
